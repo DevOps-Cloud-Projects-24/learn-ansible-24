@@ -1,10 +1,13 @@
-- hosts: all
+---
+- name: First play
+  hosts: all
   tasks:
-    - ping:
+    - name: Ping all hosts
+      ping:
 
-    - name: Sample playbook
-      hosts: all
-      tasks:
-        - name: Print Hello World
-          ansible.builtin.debug:
-            msg: Hello World
+- name: Sample playbook
+  hosts: all
+  tasks:
+    - name: Print Hello World
+      ansible.builtin.debug:
+        msg: Hello World
